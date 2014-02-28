@@ -32,3 +32,6 @@ RUN cd /tmp/core-4.3 && ./bootstrap.sh && ./configure
 
 RUN cd /tmp && wget http://downloads.pf.itd.nrl.navy.mil/core/packages/archive/4.3/linux/core-4.3-0ubuntu1_oneiric_amd64.deb
 RUN cd /tmp && dpkg -i core-4.3-0ubuntu1_oneiric_amd64.deb
+
+RUN useradd -m josh -s "/bin/bash"
+RUN echo "josh:josh" | chpasswd
